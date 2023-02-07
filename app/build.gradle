@@ -3,8 +3,8 @@ plugins {
 }
 
 repositories {
-    mavenCentral()
-    maven { url "https://repo.osgeo.org/repository/release/"}
+    maven { url "https://repo.osgeo.org/repository/release/" }
+    mavenCentral()    
 }
 
 dependencies {
@@ -14,6 +14,7 @@ dependencies {
     implementation 'org.geotools:gt-main:27.2'
     implementation 'org.geotools:gt-epsg-hsql:27.2'
     implementation 'org.geotools:gt-flatgeobuf:27.2'  
+    implementation 'org.geotools:gt-geopkg:27.2'  
     
 }
 
