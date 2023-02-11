@@ -39,7 +39,7 @@ public class App {
         SimpleFeatureCollection fc = fs.getFeatures();
         System.out.println(fc.getBounds());
     
-        File fgbFile = new File("/Users/stefan/tmp/abbaustelle.fgb");
+        File fgbFile = new File("/Users/stefan/tmp/grundbuchkreise_grundbuchkreis.fgb");
         Map<String, Serializable> fgbParams = new HashMap<>();
         fgbParams.put("url", fgbFile.toURI().toURL());
         FlatGeobufDataStoreFactory dataStoreFactory = new FlatGeobufDataStoreFactory();
@@ -56,7 +56,7 @@ public class App {
         System.out.println(fgbDatastore.getTypeNames()[0]);
         
         
-        SimpleFeatureStore featureStore = (SimpleFeatureStore) fgbDatastore.getFeatureSource("abbaustelle");
+        SimpleFeatureStore featureStore = (SimpleFeatureStore) fgbDatastore.getFeatureSource("grundbuchkreise_grundbuchkreis");
         featureStore.addFeatures(fc);
 
     
